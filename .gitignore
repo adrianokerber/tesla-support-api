@@ -23,9 +23,11 @@ wheels/
 # Virtual Environment
 venv/
 env/
+py_env/
 ENV/
 .env
 .venv
+.py_env
 env.bak/
 venv.bak/
 

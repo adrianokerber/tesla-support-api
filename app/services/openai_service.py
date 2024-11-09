@@ -1,9 +1,9 @@
-from openai import OpenAI
+from openai import AsyncOpenAI
 from app.config import settings
 from typing import List
 from app.models.schemas import Message, Section
 
-client = OpenAI(api_key=settings.OPENAI_API_KEY)
+client = AsyncOpenAI(api_key=settings.OPENAI_API_KEY)
 
 def create_system_prompt(sections: List[Section]) -> str:
     context = "\n".join([f"- {section.content}" for section in sections])

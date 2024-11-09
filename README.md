@@ -1,5 +1,7 @@
 # Tesla Support API
 
+> ⚠️ **Huge Disclaimer:** Every artifact (Ex: code, files, folders, documentation, etc.) was created following the instructions from [Cursor AI](https://www.cursor.so) **in less than 3 hours** by just doing **copy and paste**, and I don't even know Python! My request was - "Create a Python project following the instructions from https://github.com/cloudhumans/take-home" and here we are.
+
 This is an implementation of the Cloud Humans take-home challenge, creating an AI-powered customer support API for Tesla Motors.
 
 ## Technical Decisions
@@ -28,9 +30,11 @@ docker run -p 8000:8000 --env-file .env tesla-support-api
 ### Running locally:
 
 ```bash
-pip install -r requirements.txt
+pip install -r requirements
 uvicorn app.main:app --reload
 ```
+> Tip: you can also use `make` since we configured everything on Makefile to facilitate
+
 ## API Documentation
 
 Access the API documentation at:
