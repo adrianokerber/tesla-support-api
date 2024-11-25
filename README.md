@@ -30,9 +30,30 @@ docker run -p 8000:8000 --env-file .env tesla-support-api
 ### Running locally:
 
 ```bash
+# 1. Navigate to the project directory
+cd your-project-name
+
+# 2. Create a virtual environment (PS: py_env is just an example name, change as you like)
+python -m venv py_env
+
+# 3. Activate the virtual environment (The source is your named env)
+# On Windows:
+py_env\Scripts\activate
+# On macOS/Linux:
+source venv/bin/activate
+
+# 4. Install the dependencies
 pip install -r requirements
-uvicorn app.main:app --reload
+
+# 5. Run the application
+uvicorn main:app --reload
+
+# (Extra) - Use deactivate command to disable the virtual environment after the work is done ;)
+deactivate
+
 ```
+
+
 > Tip: you can also use `make` since we configured everything on Makefile to facilitate
 
 ## API Documentation

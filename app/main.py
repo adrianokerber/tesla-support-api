@@ -19,7 +19,7 @@ async def create_conversation(request: ConversationRequest):
     # Convert sections to our schema
     formatted_sections = [
         Section(
-            score=0.6,  # You would calculate this based on the actual similarity
+            score=section.get("@search.score", 0.0),
             content=section["content"],
             type=section.get("type")
         )
